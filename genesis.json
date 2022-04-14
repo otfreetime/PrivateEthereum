@@ -1,16 +1,18 @@
 {
-    "config": {
-      "chainId": 1214,
-      "homesteadBlock": 0,
-      "eip150Block": 0,
-      "eip155Block": 0,
-      "eip158Block": 0,
-      "byzantiumBlock": 0,
-      "constantinopleBlock": 0,
-      "petersburgBlock": 0,
-      "ethash": {}
-    },
-    "difficulty": "1",
-    "gasLimit": "12000000",
-    "alloc": {}
-  }
+  "config": {
+    "chainId": 1214,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "ethash": {}
+  },
+  "nonce": "0x0000000000000042",
+  "difficulty": "0x200",
+  "coinbase": "0x389cf7ec2e692a6980d68e3f252d417fc6e314af",
+  "gasLimit": "0xffffffff",
+  "alloc": {}
+}

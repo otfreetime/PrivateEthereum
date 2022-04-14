@@ -31,12 +31,15 @@ services:
     command:
       --bootnodes="enode://af22c29c316ad069cf48a09a4ad5cf04a251b411e45098888d114c6dd7f489a13786620d5953738762afa13711d4ffb3b19aa5de772d8af72f851f7e9c5b164a@geth-bootnode:30303"
       --allow-insecure-unlock
-      --http
       --http.addr="0.0.0.0"
-      --http.api="eth,web3,net,admin,personal"
+      --http
+      --http.api="web3,admin,eth,miner,net,txpool,personal"
       --http.corsdomain="*"
       --networkid=${NETWORK_ID}
       --netrestrict="172.16.254.0/28"
+      --http.vhosts="*"
+      --password=tmp/password
+      --http.port=8545
     ports:
       - "8545:8545"
     networks:
@@ -53,8 +56,11 @@ services:
       --bootnodes="enode://af22c29c316ad069cf48a09a4ad5cf04a251b411e45098888d114c6dd7f489a13786620d5953738762afa13711d4ffb3b19aa5de772d8af72f851f7e9c5b164a@geth-bootnode:30303"
       --mine
       --miner.threads=1
-      --networkid=1214
+      --networkid=${NETWORK_ID}
       --netrestrict="172.16.254.0/28"
+      --miner.etherbase="0x0000000000000000000000000000000000000003"
+      --http.port=8546
+      --http.api="web3,admin,eth,miner,net,txpool,personal"
     networks:
       priv-eth-net:
 

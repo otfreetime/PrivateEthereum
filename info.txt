@@ -1,7 +1,12 @@
 crete image: docker build -t geth-client .
 
+personal.unlockAccount(eth.accounts[1],"5uper53cr3t");
+eth.accounts
+web3.fromWei(eth.getBalance(eth.accounts[0]),  "ether")
+web3.fromWei(eth.getBalance("0x0000000000000000000000000000000000000003"),  "ether")
 
-
+new Account :
+    "0x15f93545b538fbc9f585393ef87d1eb4043f823a" pasword:123456789
 
 1- the connectivity of the nodes:
 
@@ -45,7 +50,7 @@ curl --location --request POST 'localhost:8545' \
     "id": 4,
     "method": "eth_getBalance",
     "params": [
-        "0x389cf7ec2e692a6980d68e3f252d417fc6e314af",
+        "0x0000000000000000000000000000000000000003",
         "latest"
     ]
 }'
@@ -73,13 +78,13 @@ curl --location --request POST 'http://localhost:8545' \
     "id": 6,
     "method": "personal_unlockAccount",
     "params": [
-        "0x5b6cf1dd9a038554c3e0283c92b754701b01479b",
+        "0xcb33fdd1dd5b26e932d56f1d6755aed04eaaab25",
         "5uper53cr3t"
     ]
 }'
 {"jsonrpc":"2.0","id":6,"result":true}
 
-curl --location --request POST 'http://localhost:8545' \
+curl --location --request POST 'http://localhost:8554' \
 --header 'Content-type: application/json' \
 --data-raw '{
     "jsonrpc": "2.0",
